@@ -5,8 +5,8 @@ spring:
   profiles:
     active: dev
   application:
-    name: @pom.artifactId@
+    name: paascloud-gateway
 
 swagger:
-  title: @pom.artifactId@
-  description: @pom.description@
+  title: paascloud-gateway
+  description: paascloud-gateway
