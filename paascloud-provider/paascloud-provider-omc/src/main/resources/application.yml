@@ -8,4 +8,4 @@ spring:
     name: paascloud-provider-omc
   datasource:
     username: root
-    password: root
+    password: admin
