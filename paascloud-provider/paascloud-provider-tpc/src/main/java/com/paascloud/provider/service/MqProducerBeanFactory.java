@@ -56,6 +56,8 @@ public class MqProducerBeanFactory {
 
 		String pid = producerDto.getProducerGroup();
 		DefaultMQProducer mQProducer = DEFAULT_MQ_PRODUCER_MAP.get(pid);
+		// 必须设为false否则连接broker10909端口
+		mQProducer.setVipChannelEnabled(false);
 		if (mQProducer == null) {
 			String simpleName = producerDto.getProducerGroup();
 			BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.rootBeanDefinition(DefaultMQProducer.class);

@@ -54,6 +54,7 @@ public class RocketMqProducer {
 				result = MqProducerBeanFactory.getBean(pid).send(msg);
 				break;
 			} catch (Exception e) {
+				e.printStackTrace();
 				log.error("发送消息失败:", e);
 				if (iniCount++ >= PRODUCER_RETRY_TIMES) {
 					throw new TpcBizException(ErrorCodeEnum.TPC100500014, msg.getTopic(), msg.getKeys());
